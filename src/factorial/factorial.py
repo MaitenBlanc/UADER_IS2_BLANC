@@ -32,19 +32,23 @@ if "-" in num:
     # Divido la entrada del input para poder guardar los 2 números del rango
     partes = num.split("-")
     
+    # Verifico si el límite inferior está vacío
     if partes[0] == "": 
         num1 = 1    
     else:
         num1 = int(partes[0])
-        
+    
+    # Verifico si el límite superior está vacío
     if partes[1] == "":
         num2 = 60
     else:
         num2 = int(partes[1])
         
+    # Itero con los límites que obtuve anteriormente (puede ser inf-sup, inf- o -sup)
     for i in range(num1, num2 + 1):
         print("Factorial ", i, "! es ", factorial(i))
 else:
+    # Capto y muestro el factorial cuando sólo se pasa un número en particular
     num = int(num)
     print("Factorial ", num, "! es ", factorial(num))
 # Fin modificación 2 y 3
