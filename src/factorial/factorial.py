@@ -6,8 +6,6 @@
 # * Creative commons                                                        *
 # *-------------------------------------------------------------------------*
 import sys
-
-
 def factorial(num):
     if num < 0:
         print("Factorial de un número negativo no existe")
@@ -27,7 +25,18 @@ if len(sys.argv) < 2:
     num = input("Debe informar un número: ")
 else:
     num = sys.argv[1]
-
-num = int(num)
-print("Factorial ", num, "! es ", factorial(num))
 # Fin modificación 1
+
+# Modificación 2: aceptar números de un rango
+if "-" in num:
+    # Divido la entrada del input para poder guardar los 2 números del rango
+    partes = num.split("-")
+    num1 = int(partes[0])
+    num2 = int(partes[1])
+
+    for i in range(num1, num2 + 1):
+        print("Factorial ", i, "! es ", factorial(i))
+else:
+    num = int(num)
+    print("Factorial ", num, "! es ", factorial(num))
+# Fin modificación 2
