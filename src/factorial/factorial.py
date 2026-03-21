@@ -27,16 +27,24 @@ else:
     num = sys.argv[1]
 # Fin modificación 1
 
-# Modificación 2: aceptar números de un rango
+# Modificación 2 y 3: aceptar números de un rango
 if "-" in num:
     # Divido la entrada del input para poder guardar los 2 números del rango
     partes = num.split("-")
-    num1 = int(partes[0])
-    num2 = int(partes[1])
-
+    
+    if partes[0] == "": 
+        num1 = 1    
+    else:
+        num1 = int(partes[0])
+        
+    if partes[1] == "":
+        num2 = 60
+    else:
+        num2 = int(partes[1])
+        
     for i in range(num1, num2 + 1):
         print("Factorial ", i, "! es ", factorial(i))
 else:
     num = int(num)
     print("Factorial ", num, "! es ", factorial(num))
-# Fin modificación 2
+# Fin modificación 2 y 3
