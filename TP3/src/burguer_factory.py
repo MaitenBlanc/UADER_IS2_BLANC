@@ -1,8 +1,3 @@
-# 3. Genere una clase donde se instancie una comida rápida “hamburguesa” que
-# pueda ser entregada en mostrador, retirada por el cliente o enviada por
-# delivery. A los efectos prácticos bastará que la clase imprima el método de
-# entrega.
-
 from abc import ABC, abstractmethod
 
 
