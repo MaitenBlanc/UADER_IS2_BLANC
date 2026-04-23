@@ -1,8 +1,3 @@
-# Implemente una clase “factura” que tenga un importe correspondiente al total
-# de la factura pero de acuerdo a la condición impositiva del cliente (IVA
-# Responsable, IVA No Inscripto, IVA Exento) genere facturas que indiquen tal
-# condición.
-
 from abc import ABC, abstractmethod
 
 
